@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Counter from './components/Counter';
+import PostsList from './components/PostsList';
 import UsersList from './components/UsersList';
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
       <h2>{isLoggedInState ? 'is logged' : 'is not logged in'}</h2>
       <Counter />
       <UsersList />
+      <h2>Posts List</h2>
+      <PostsList />
     </div>
   );
 }

@@ -9,7 +9,8 @@ function PostsList() {
   const [postsArray, setPostsArray] = useState([]);
 
   async function getPosts() {
-    const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const LIMIT_POST = 15;
+    const resp = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${LIMIT_POST}`);
     const dataInJs = await resp.json();
     setPostsArray(dataInJs);
   }
@@ -17,10 +18,12 @@ function PostsList() {
     getPosts();
   });
   return (
-    <ul>
+    <ol>
       {postsArray.map((pObj) => (
         <li key={pObj.id}>{pObj.title}</li>
       ))}
-    </ul>
+    </ol>
   );
 }
+
+export default PostsList;
