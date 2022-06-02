@@ -14,13 +14,18 @@ function Users() {
     // setUsersArray(userDummyData);
   }
 
+  useEffect(() => {
+    console.log('UsersList useEffect ran ===');
+    getUsers();
+  }, []);
+
   function User(props) {
     return (
       <ul>
         {props.length === 0 && <h2>Loading users ....</h2>}
-        {usersArray.map((uObj) => (
-          <li key={uObj.id}>
-            {uObj.name} email: {uObj.email}
+        {usersArray.map(() => (
+          <li key={props.id}>
+            {props.name} email: {props.email}
           </li>
         ))}
       </ul>

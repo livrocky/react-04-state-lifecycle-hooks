@@ -31,14 +31,14 @@ function UsersList() {
   return (
     <div>
       <h2>Users</h2>
-      <ul>
+      {/* <ul>
         {usersArray.length === 0 && <h2>Loading users ....</h2>}
         {usersArray.map((uObj) => (
           <li key={uObj.id}>
             {uObj.name} email: {uObj.email}
           </li>
         ))}
-      </ul>
+      </ul> */}
       <hr></hr>
     </div>
   );
