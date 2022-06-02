@@ -12,7 +12,7 @@ function Counter() {
     // jei musu nauja busena priklauso nuo pries tai buvusios
     // mes turim antaujinimo reiksme paduoti su funkcija
     setCouterValue((prevState) => {
-      console.log('prevState ===', prevState);
+      //   console.log('prevState ===', prevState);
       return prevState + 1;
     });
   }
